@@ -1,0 +1,13 @@
+{% extends "header.html" %}
+
+
+
+
+{% block body %}
+    <body>
+        <h1> {{object.id_number}} </h1>
+        <p> Name: {{object.fname}}  {{object.lname}}</p>
+        <p> Password: {{ object.password }}</p>
+    </body>
+
+{% endblock body %}

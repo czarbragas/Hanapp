@@ -1,0 +1,155 @@
+body
+{
+    margin-bottom: 140px;
+}
+section.container
+{
+    margin-top:30px;
+}
+.adnu-logo-figure {
+    background-image: url("../image/logo/adnu-logo.png");
+    background-position: 0 8px;
+    background-repeat: no-repeat;
+    background-size: 128px 128px;
+    display: inline-block;
+    height: 140px;
+    margin-bottom: 35px;
+    text-decoration: none;
+    vertical-align: top;
+    width: 128px;
+}
+
+#dangerAlert p {
+    color: red;
+}
+#confirmAlert p {
+    color: blue;
+}
+.footer_design {
+    background-color: #1c558d !important;
+    color: white;
+}
+.footer_bottom {
+    background-color: #15416c !important;
+    color: white;
+}
+
+.sidebar .topmenu li.active a > .figure > [class*=" ico-"], .sidebar .topmenu li.active a > .figure > [class^="ico-"] {
+    border-color: #e0bb4d;
+    color: #e0bb4d;
+}
+.sidebar .topmenu li.open a {
+    color: white;
+}
+.sidebar .topmenu li.active {
+    background-color: #777;
+}
+
+.ico-cog22 {
+    color: #fff !important;
+}
+.caret {
+    color: #fff !important;
+}
+#header.navbar .navbar-toolbar .navbar-nav > li > a {
+    color: #fff !important;
+}
+.popOverAbbr
+{
+    font-size: 24px; 
+    margin-left: 10px; 
+    color: #91c854;
+    font-weight: bold;
+}
+
+.frontend footer#footer
+{
+    position: absolute !important;    
+    bottom: 0;    
+    width: 100%;
+}
+
+
+    table caption {
+        padding: .5em 0;
+    }
+
+    .sidebar-minimized .avatarPanel
+    {
+        display: none;
+    }
+
+
+    .empInfo , .moduleNameHolder
+    {
+        margin: 0 auto;
+        width: 150px;
+    }
+
+    .nameOfEmployee , .moduleName
+    {
+        color: #ddd;
+        font-size: 20px;
+    }
+
+    @media (max-width: 1920px)
+    {
+        .panel .table-responsive 
+        {
+            border-left: 0 !important;
+            border-right: 0 !important;
+            border-top: 0 !important;
+        }
+    }
+    @media (max-width: 1920px)
+    {
+        .table-responsive 
+        {
+            width: 100% !important;
+            overflow-x: scroll !important;
+            overflow-y: hidden !important;
+            border: 0 !important;
+        }
+    }
+    @media (min-width: 992px)
+    {
+        header .container 
+        {
+            width: 100%;
+        }
+    }
+    
+    @media screen and (max-width: 991px)
+    {
+        .avatarPanel 
+        {
+        display: none;
+        }
+    }
+    
+    @media screen and (max-width: 975px)
+    {
+        .avatarPanel 
+        {
+            display: none;
+        }
+    }
+    @media (min-width: 768px)
+    {
+        header .container 
+        {
+            width: 100%;
+        }
+    }   
+    @media screen and (max-width: 767px) 
+    {
+        table caption 
+        {
+            border-bottom: 1px solid #ddd;
+        }
+        .dropdown.profile a
+        {
+            border-bottom:0 !important;
+        }
+    }
+    

@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+
+
+
+
+{% block body %}
+    <body>
+        <h1>ITAssetManager Accounts: </h1>
+
+        <ul>
+            {% for obj in object_list %}
+            <li> <a href = '/accounts/{{obj.slug}}'>{{obj.id_number}}  {{obj.fname}}  {{obj.lname}}</a></li>
+            {% endfor %}
+        </ul>
+    </body>
+
+{% endblock body %}

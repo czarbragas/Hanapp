@@ -1,0 +1,141 @@
+{% extends "snippets/dashboard.html" %}
+
+{% block signin %}
+ 
+ <a href="../../../logout/" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user"></i> Sign Out </a>
+
+ {% endblock signin %}
+
+{%  load static %}
+{% block body %}
+<div class="navig">
+
+	
+	<div class="boxes">
+		<!-- {% if teachers.MOOD == "Not in the Mood" %}
+			<img class="profile_pic_not_set" src="{{teachers.ProfPicAngry.url}}"> 
+
+		{% else %} -->
+			<img class="profile_pic_not_set" src="{{teachers.ProfPicHappy.url}}"> 
+
+		<!-- {% endif%} -->
+
+			<br>
+			<span class="name">
+			{{teachers.FIRST_NAME}} {{teachers.LAST_NAME}}
+			</span>
+			<br>
+
+
+		{% if  teachers.AVAILABILITY == "Available in the Department" %}
+			<img class="availability_icon" src="{% static "assets/available.png" %}"> 
+
+		{% elif  teachers.AVAILABILITY == "Unavailable" %}
+			<img class="availability_icon" src="{% static "assets/not_available.png" %}"> 
+
+		{% else %}
+			<img class="availability_icon" src="{% static "assets/not set.png" %}"> 
+
+		{% endif%}
+
+
+			<span class="title">
+			{{ teachers.AVAILABILITY}}		
+			</span>
+			<br>
+
+		<!-- {% if  teachers.MOOD == "Happy" %}
+			<img class="availability_icon" src="{% static "assets/available.png" %}"> 
+
+		{% elif  teachers.MOOD == "Not in the Mood" %}
+			<img class="availability_icon" src="{% static "assets/not_available.png" %}"> 
+
+		{% else %}
+			<img class="availability_icon" src="{% static "assets/not set.png" %}"> 
+
+		{% endif%}
+			<span class="title">
+			{{ teachers.MOOD}}
+			</span>
+			<br>
+			<br> -->
+
+		{% if teachers.STATUS != None %}
+			<span class="title">
+			"{{ teachers.STATUS }}"
+			</span> <br>
+		{% endif %}
+
+			<span class="last_edited">
+			last edited: {{ teachers.LAST_EDITED}}
+			</span>
+			
+			<br>
+	</div>
+	<br>
+
+<div class="edit_data_box"> 
+<form method="POST">
+{% csrf_token %}
+<!-- {{ schedEdit.as_p }} -->
+
+<center> <input type="submit" class="verify_button" name="submit" value="Save"> </center>
+</form>
+ </div>
+
+
+
+</div>
+
+<section>
+    <div class="announcement_title" style='background:#369;'>
+                                 
+                                    <div class="text-center">
+
+                                        <i class="fa fa-calendar fa-university fa-3x"></i>
+                                        <div><i><strong><h4>Announcements</h4></strong></i></div>
+                          
+                                    </div>
+                                </div>
+    <div class="announcement_navig">
+    {% for ann in announcement %}
+    <div class="announcement_box">
+    	<img class="announcement_pic" src="{% static "images/mar_h.png" %}"> 
+    	<span class ="announcement_name"> 
+    		{{ann.TITLE}} 
+    	</span> <br> <br>
+
+    	<span class ="announcement_content">
+    		{{ann.CONTENT}} 
+    	</span> 
+    		<br>
+			<br>
+    		<br>
+    		<br>
+    	<span class ="announcement_posted">
+    		posted: {{ann.TIME_POSTED}}   
+    	</span>
+
+
+   
+    </div>
+    {% endfor %}
+</div>
+</section>
+
+<div class="section2">
+
+                                <div class="about_title" style='background:#369;'>
+                                 	<img class="about_pic1" src="{% static "images/czar_h.png" %}"><br>
+									<img class="about_pic2" src="{% static "images/jaymee_h.png" %}">
+                                    <div class="text-center">
+                                        <div><i><strong><h4>About Hanapp</h4></strong></i></div>
+                          
+                                    </div>
+                                </div>
+              <div class="about_content"> Hanapp is the DCS consultation App developed by Czar Bragas & Jaymee Olano <br> for the Department of Computer Science <br>
+               © Copyright 2017</div>
+</div>
+
+
+{% endblock body%}

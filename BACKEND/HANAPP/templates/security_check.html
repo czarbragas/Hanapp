@@ -1,0 +1,15 @@
+{% extends "snippets/dashboard.html" %}
+
+{%  load static %}
+{% block body %}
+<div class="password_box">
+<div class="name">Security Key:</div>
+
+<form method ="post"> 
+{% csrf_token %}
+<input type="password" name="password" value=""><br><br>
+<center> <input type="submit" class="verify_button" name="submit" value="Submit"> </center>
+</form>
+ </div>
+
+{% endblock body%}

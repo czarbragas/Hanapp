@@ -1,0 +1,121 @@
+<html>
+{% include "bootstrap.html" %}
+<title> {% block head_title %} ADNU DCS {% endblock head_title %}</title>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <!-- Brand and toggle get grouped for better mobile display -->
+           
+            <!-- Top Menu Items -->
+            <header id="header" class="navbar navbar-fixed-top" style='background:#369;'>
+            
+                <!-- START navbar header -->
+                <div class="navbar-header" style='background:#369; '>
+                    <!-- Brand -->
+                    <!-- <a class="navbar-brand"  style="width:100%;" > -->
+                        <!--span class="logo-figure" style="margin-left:-4px;"></span-->
+                        <div class="Head">
+                        HANAPP
+                        </div>
+                    <!-- </a> -->
+                    <!--/ Brand -->
+                </div>
+                <!--/ END navbar header -->
+
+          
+            <ul class="nav navbar-right top-nav">
+               
+                <li class="dropdown">
+                    {% block signin %}
+                   
+                    {% endblock signin %}
+                   <!--   '<form action="security_key.php" method ="get">'.
+    '<input type="submit" class="button" name="submit" value="Edit">'.
+    '</form>'. -->
+                </li>
+            </ul>
+        </header>  
+            
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div class="collapse navbar-collapse navbar-ex1-collapse">
+                <ul class="nav navbar-nav side-nav">
+                    <li class="active">
+                        <a href="#"><i class="fa fa-fw fa-dashboard"></i> Index</a>
+                    </li>
+                   
+                    <li>
+                   
+                     <div class="wthree-footer">
+                        
+                     
+                        <p>&copy; Copyright 2017 <br>Ateneo de Naga University <br> Developed by the HANAPP Team.</p>
+                       
+                    </div>
+                    </li>
+
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </nav>
+
+        <div id="page-wrapper">
+
+            <div class="container-fluid">
+
+                <!-- Page Heading -->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <h1 class="page-header">
+                            Department of Computer Science
+                        </h1>
+                        <ol class="breadcrumb">
+                            <li>
+                                <i class="fa fa-dashboard"></i>  <a href="#">Dashboard</a>
+                            </li>
+                            <li class="active">
+                                <i class="fa fa-edit"></i> Forms
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <!-- /.row -->
+           
+
+
+               <div class="col-lg-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                       
+                               <div class="row">
+
+                               	{% block body %}
+
+                               	{% endblock body %}
+
+
+
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+    
+    <!-- /#wrapper -->
+
+<script type="text/javascript" src="js/jquery.mask.js"></script>
+    <!-- jQuery  -->
+
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript  -->
+
+    <script src="js/bootstrap.min.js"></script>
+</body>
+
+
+
+</html>
